@@ -35,9 +35,50 @@ style: style.css
 - Input
 
 --
+# ES and FP
+## Entity and Components are JUST DATA
+
+```clojure
+{ 1 [ { :type :player }
+      { :type :accepts-input }
+      { :type :sprite :image "dog.png" :x 10 :y 30 } ]
+  2 [ { :type :enemy }
+      { :type :ai :action :kill }
+      { :type :sprite :image "robot.png" :x 50 :y 30 } ]
+  3 [ { :type :bullet }
+      { :type :physics :velocity { :x 5 :y 0 } }
+      { :type :sprite :image "bullet.png" :x 20 :y 30 } ] }
+```
+
+--
+# ES and FP
+## Systems can be JUST FUNCTIONS
+
+```clojure
+(defn process-one-game-tick [system delta]
+  ; Do some sort of cool thing here
+  )
+```
+
+--
+## Common ES System Functions
+
+- `(create-entity)`
+- `(add-entity system)`
+- `(add-component system component)`
+- `(get-component system entity type)`
+- `(remove-component system entity instance)`
+- `(kill-entity system entity)`
+
+-- 
+#Brute
+## A simple and lightweight Entity Component System library for writing games with Clojure.
+
+--
 ## Learn More
 - https://github.com/markmandel/brute
 - https://github.com/markmandel/brute-play-pong
-- https://github.com/oakes/play-clj
 - http://entity-systems.wikidot.com/
 - http://t-machine.org/index.php/category/entity-systems/
+- https://github.com/oakes/play-clj
+- http://libgdx.badlogicgames.com/

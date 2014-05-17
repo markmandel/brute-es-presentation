@@ -446,17 +446,57 @@ body {
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
+    <section class="slide-content"><h1 id="es-and-fp">ES and FP</h1>
+<h2 id="entity-and-components-are-just-data">Entity and Components are JUST DATA</h2>
+<pre><code class="lang-clojure">{ 1 [ { :type :player }
+      { :type :accepts-input }
+      { :type :sprite :image &quot;dog.png&quot; :x 10 :y 30 } ]
+  2 [ { :type :enemy }
+      { :type :ai :action :kill }
+      { :type :sprite :image &quot;robot.png&quot; :x 50 :y 30 } ]
+  3 [ { :type :bullet }
+      { :type :physics :velocity { :x 5 :y 0 } }
+      { :type :sprite :image &quot;bullet.png&quot; :x 20 :y 30 } ] }</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-8">
+    <section class="slide-content"><h1 id="es-and-fp">ES and FP</h1>
+<h2 id="systems-can-be-just-functions">Systems can be JUST FUNCTIONS</h2>
+<pre><code class="lang-clojure"><span class="list">(<span class="title"><span class="built_in">defn</span></span> process-one-game-tick <span class="collection">[system delta]</span>
+  <span class="comment">; Do some sort of cool thing here</span>
+  )</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-9">
+    <section class="slide-content"><h2 id="common-es-system-functions">Common ES System Functions</h2>
+<ul>
+<li><code>(create-entity)</code></li>
+<li><code>(add-entity system)</code></li>
+<li><code>(add-component system component)</code></li>
+<li><code>(get-component system entity type)</code></li>
+<li><code>(remove-component system entity instance)</code></li>
+<li><code>(kill-entity system entity)</code></li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden  " id="slide-10">
+    <section class="slide-content"><h1 id="brute">Brute</h1>
+<h2 id="a-simple-and-lightweight-entity-component-system-library-for-writing-games-with-clojure-">A simple and lightweight Entity Component System library for writing games with Clojure.</h2>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-11">
     <section class="slide-content"><h2 id="learn-more">Learn More</h2>
 <ul>
 <li><a href="https://github.com/markmandel/brute">https://github.com/markmandel/brute</a></li>
 <li><a href="https://github.com/markmandel/brute-play-pong">https://github.com/markmandel/brute-play-pong</a></li>
-<li><a href="https://github.com/oakes/play-clj">https://github.com/oakes/play-clj</a></li>
 <li><a href="http://entity-systems.wikidot.com/">http://entity-systems.wikidot.com/</a></li>
 <li><a href="http://t-machine.org/index.php/category/entity-systems/">http://t-machine.org/index.php/category/entity-systems/</a></li>
+<li><a href="https://github.com/oakes/play-clj">https://github.com/oakes/play-clj</a></li>
+<li><a href="http://libgdx.badlogicgames.com/">http://libgdx.badlogicgames.com/</a></li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-8">
+  <div class="slide hidden" id="slide-12">
     <section class="slide-content"><div class="author">
   <h1 class="name">Mark Mandel</h1>
     <h3 class="twitter">
